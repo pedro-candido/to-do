@@ -121,6 +121,8 @@ const TaskListItem = ({
         <TouchableOpacity
           testID={`trash-${index}`}
           onPress={() => handleRemoveTask(id)}
+          disabled={isTaskBeingEdited ? true : false}
+          style={isTaskBeingEdited && styles.trashEditing}
         >
           <Image source={trashIcon} />
         </TouchableOpacity>
@@ -177,6 +179,9 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     width: 24,
+  },
+  trashEditing: {
+    opacity: 0.2,
   },
 });
 
