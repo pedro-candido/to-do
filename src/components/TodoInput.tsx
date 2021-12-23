@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { StyleSheet, TextInput, TouchableOpacity, View } from "react-native";
 import Icon from "react-native-vector-icons/Feather";
+import trashIcon from "../assets/icons/trash/trash.png";
 
 interface TodoInputProps {
   addTask: (task: string) => void;
